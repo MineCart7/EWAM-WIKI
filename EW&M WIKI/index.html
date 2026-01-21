@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>EW&M - Wiki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-icon"></div>
+        <div class="header-title">EXPLORER'S WORLD MAP & MINIMAP</div>
+        <button class="download-btn" onclick="location.href='#downloads'">
+            DOWNLOAD
+        </button>
+
+    </header>
+
+    <div class="page">
+
+        <!-- CONTENUTO PRINCIPALE -->
+        <main class="content-card">
+
+            <!-- TAB NAVIGATION -->
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="overview">WIKI</button>
+                <button class="tab-btn" data-tab="faq">FAQ</button>
+                <button class="tab-btn" data-tab="discord">Discord</button>
+            </div>
+
+            <!-- OVERVIEW TAB -->
+            <div class="tab-content active" id="overview">
+                <h1>EW&M WIKI</h1>
+                <p>
+                    Here you can find all the features of the addon explained in detail.
+                </p>
+
+                <div class="feature-tabs">
+
+                    <div class="feature-tab-nav">
+                        <button class="feature-tab-btn active" data-feature="minimap">Minimap</button>
+                        <button class="feature-tab-btn" data-feature="worldmap">Worldmap</button>
+                        <button class="feature-tab-btn" data-feature="settings">Settings</button>
+                        <button class="feature-tab-btn" data-feature="config">Config</button>
+                        <button class="feature-tab-btn" data-feature="waypoints">Waypoints</button>
+                        <button class="feature-tab-btn" data-feature="rt">Script</button>
+
+                    </div>
+
+                    <div class="feature-tab-content" id="feature-rt">
+                        <div class="faq-box yes">
+                            <h3 class="">In Real Time Rendering</h3>
+                            <p>The minimap renders the world in real time while you explore.
+                        </div>
+                        <div class="faq-box yes">
+                            <h3 class="">Deeply Optimised</h3>
+                            <p>The script is light and uses minimal resources.
+                        </div>
+                        <div class="faq-box yes">
+                            <h3 class="">Single-Pass Rendering</h3>
+                            <p>All the rendering pipeline of getting data, processing, effects and displaying is done in
+                                a single pass.
+                        </div>
+                        <div class="faq-box yes">
+                            <h3 class="">Cache</h3>
+                            <p>All the explored chunks are stored in a local cache to avoid re-rendering them.
+                        </div>
+                        <div class="faq-box yes">
+                            <h3 class="">Data Compression</h3>
+                            <p>The data is compressed in memory to save space but at a small performance cost.
+                        </div>
+
+                    </div>
+
+                    <div class="feature-tab-content active" id="feature-minimap">
+                        <h3>MiniMap</h3>
+                        <p>
+                            Displays nearby terrain with a live player locator.
+                            Supports caves, dimensions and color variations.
+                        </p>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+
+                                <div class="feature-text">
+                                    <h3>64x64 Display</h3>
+                                    <p>
+                                        You can adjust the block/pixel ratio (scale) in your settings
+                                        to show a 384x384 blocks area.
+                                    </p>
+                                </div>
+                                <img class="showcase-image" src="images/64x64.png" alt="Screenshot">
+
+                            </div>
+                        </div>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+
+                                <div class="feature-text">
+                                    <h3>Cave Support</h3>
+                                    <p>The minimap can show underground caves (you can find it in the settings).
+                                </div>
+                                <img class="showcase-image" src="images/cave_mode.png" alt="Screenshot">
+
+                            </div>
+
+                        </div>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+
+                                <div class="feature-text">
+                                    <h3>Water Depth Effect</h3>
+                                    <p>Water is rendered with a depth effect to show underwater terrain.
+                                </div>
+                                <img class="showcase-image" src="images/cave_depth.png" alt="Screenshot">
+                            </div>
+
+                        </div>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+                                <div class="feature-text">
+                                    <h3>Shading</h3>
+                                    <p>The minimap has a shading effect to show the depth of cliffs.
+                                </div>
+                                <img class="showcase-image" src="images/shading.png" alt="Screenshot">
+                            </div>
+
+                        </div>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+
+                                <div class="feature-text">
+                                    <h3>Player Locator</h3>
+                                    <p>In the center of the minimap you can find a player locator that shows your
+                                        position
+                                        and rotation.
+                                </div>
+                                <img class="showcase-image" src="images/locator.png" alt="Screenshot">
+                            </div>
+                        </div>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+                                <div class="feature-text">
+                                    <h3>16 Channels RGB Colors</h3>
+                                    <p>4096 different colors make biome blending smooth and accurate.
+                                </div>
+                                <img class="showcase-image" src="images/biome_blending.png" alt="Screenshot">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="feature-tab-content" id="feature-worldmap">
+                        <h3>World-Map</h3>
+                        <p>
+                            A full world overview that tracks explored areas.
+                        </p>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+                                <div class="feature-text">
+                                    <h3>Extremely Large Area</h3>
+                                    <p>You can render a 2400x1080 blocks area in a single map. It can take a little bit
+                                        of time to load but its worth it. Berock isnt enough advanced yet to make it
+                                        load faster.
+                                </div>
+                                <img class="showcase-image" src="images/2.png" alt="Screenshot">
+
+                            </div>
+                        </div>
+                        <div class="faq-box yes">
+
+                            <div class="feature-showcase">
+                                <div class="feature-text">
+                                    <h3>Keybinds control</h3>
+                                    <p>You can close the map by crouching, you can navigate into the world map by
+                                        holding jump and moving.
+                                </div>
+                                <img class="showcase-image" src="images/mk.png" alt="Screenshot">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="feature-tab-content" id="feature-settings">
+                        <h3>Personal Settings</h3>
+                        <p>
+                            Customize zoom, resolution, effects and rendering behavior
+                            to fit your device and playstyle.
+                        </p>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+                                <div class="feature-text">
+                                    <h3>World-Map Resolution</h3>
+                                    <p>This chooses the amount of pixels to render in the world map.
+                                        Higher values means more time to load but better quality.
+                                </div>
+                                <img class="showcase-image" src="images/resolution.png" alt="Screenshot">
+
+                            </div>
+                        </div>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+                                <div class="feature-text">
+                                    <h3>World/Mini Map Scale</h3>
+                                    <p>This chooses the block/pixel ratio for both maps.
+                                        Higher values means more area shown but less details.
+                                </div>
+                                <img class="showcase-image" src="images/scale.png" alt="Screenshot">
+
+                            </div>
+                        </div>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+                                <div class="feature-text">
+                                    <h3>Cave Mode</h3>
+                                    <p>This mode shows the underground caves in both maps. Toggle it when
+                                        exiting/entering a cave,
+                                        this works very badly outside of caves.
+                                </div>
+                                <img class="showcase-image" src="images/cave_mode_2.png" alt="Screenshot">
+
+                            </div>
+                        </div>
+                        <div class="faq-box yes">
+                            <div class="feature-showcase">
+                                <div class="feature-text">
+                                    <h3>Shading Mode</h3>
+                                    <p>This changes the aspect of the map and it can enhance a lot the depth of the
+                                        terrain.
+                                </div>
+                                <img class="showcase-image" src="images/shading_mode.png" alt="Screenshot">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="feature-tab-content" id="feature-config">
+                        <h3>World Configuration</h3>
+                        <p>
+                            Those are mostly performance related settings that affects every player in the world.
+                        </p>
+                    </div>
+
+                    <div class="feature-tab-content" id="feature-waypoints">
+                        <h3>Waypoints</h3>
+                        <p>
+                            This feature isnt out yet but soon will be added.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- IMAGES TAB -->
+            <div class="tab-content" id="discord">
+                <h3>Here you can ask for support, report bugs and suggest new features.</h3>
+
+                <a class="discord-link" href="https://discord.gg/AghWDNehru">JOIN DISCORD</a>
+            </div>
+
+            <!-- IMAGES TAB -->
+            <div class="tab-content" id="images">
+                <h2>InGame Screenshots</h2>
+                <p>Only in-game footage is shown.</p>
+
+                <div class="image-gallery">
+                    <img src="images/0.png" alt="Screenshot">
+                    <img src="images/1.png" alt="Screenshot">
+                    <img src="images/2.png" alt="Screenshot">
+                    <img src="images/3.png" alt="Screenshot">
+                    <img src="images/4.png" alt="Screenshot">
+                    <img src="images/5.png" alt="Screenshot">
+                </div>
+            </div>
+
+            <!-- FAQ TAB -->
+            <div class="tab-content" id="faq">
+                <h2>FAQ</h2>
+                <div class="faq-box yes">
+                    <h3>Does the minimap work have achievements?</h3>
+                    <p>Yes, but with some downsides.</p>
+                </div>
+
+                <div class="faq-box maybe">
+                    <h3>Is it compatible with servers?</h3>
+                    <p>Most people reported that it doesn't, but a minority says that it does.</p>
+                </div>
+
+                <div class="faq-box no">
+                    <h3>Can you make it achievement friendly?</h3>
+                    <p>No, beta API is needed to get other addon's blocks color.</p>
+                </div>
+
+                <div class="faq-box yes">
+
+                    <h3>Does this work on any device?</h3>
+                    <p>It does work on Pc and Mobile, but its not tested if it does on console.</p>
+                </div>
+
+                <div class="faq-box maybe">
+
+                    <h3>Is it compatible with servers?</h3>
+                    <p>Most people reported that it doesn't. but a minorance says that it does.</p>
+                </div>
+
+                <div class="faq-box no">
+
+                    <h3>Is it possible to have buttons to interact with the map instead of commands?</h3>
+                    <p>No, bedrock UI buttons cant send inputs to scripts.</p>
+                </div>
+
+                <div class="faq-box no">
+
+                    <h3>Can you make it achievement friendly?</h3>
+                    <p>No, beta api is needed to get other addon's blocks color.</p>
+                </div>
+
+                <div class="faq-box yes">
+
+                    <h3>Does it work with modded blocks?</h3>
+                    <p>Yes, that's the reason beta api is needed.</p>
+                </div>
+
+                <div class="faq-box maybe">
+                    <h3>Is it compatible with other resource packs?</h3>
+                    <p></p>Most likely no a lot of stuff of this addon require specific assets.</p>
+                </div>
+
+                <div class="faq-box yes">
+                    <h3>Is multiplayer supported?</h3>
+                    <p>Yes it is, with some bugs becouse i didnt test it yet.</p>
+                </div>
+
+        </main>
+
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-card" id="downloads">
+                <h3>Download V1.2.8<div class="version-meta">Redirected to CurseForge</div>
+                </h3>
+
+                <a href="https://www.curseforge.com/minecraft-bedrock/addons/explorers-world-map/files/7483259"
+                    class="version-link">
+                    <div class="version-entry achievements">
+                        <div class="version-label achievements">
+                            <img class="achievement-image" src="images/achievements.png" alt="Screenshot">
+                            1.21.130
+                        </div>
+                        <div class="version-meta">MC 1.21.100+ <span class="vpipe"></span> API 2.1.0-stable<br>
+                            <red>Note:</red> This version has some downsides.
+                        </div>
+
+                    </div>
+                </a>
+                <a href="https://www.curseforge.com/minecraft-bedrock/addons/explorers-world-map/files/7426016"
+                    class="version-link">
+                    <div class="version-entry accent">
+                        <div class="version-label">1.21.130</div>
+                        <div class="version-meta">Latest Version <span class="vpipe"></span> API 2.5.0-beta</div>
+                    </div>
+                </a>
+                <a href="https://www.curseforge.com/minecraft-bedrock/addons/explorers-world-map/files/7434199"
+                    class="version-link">
+                    <div class="version-entry">
+                        <div class="version-label">1.21.120</div>
+                        <div class="version-meta">MC 1.21.120 <span class="vpipe"></span> API 2.4.0-beta</div>
+                    </div>
+                </a>
+                <a href="https://www.curseforge.com/minecraft-bedrock/addons/explorers-world-map/files/7434198"
+                    class="version-link">
+                    <div class="version-entry">
+                        <div class="version-label">1.21.110</div>
+                        <div class="version-meta">MC 1.21.110 <span class="vpipe"></span> API 2.3.0-beta</div>
+                    </div>
+                </a>
+                <a href="https://www.curseforge.com/minecraft-bedrock/addons/explorers-world-map/files/7430133"
+                    class="version-link">
+                    <div class="version-entry">
+                        <div class="version-label">1.21.100</div>
+                        <div class="version-meta">MC 1.21.100 <span class="vpipe"></span> API 2.2.0-beta
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.curseforge.com/minecraft-bedrock/addons/explorers-world-map/files/7430132"
+                    class="version-link">
+                    <div class="version-entry">
+                        <div class="version-label">1.21.90</div>
+                        <div class="version-meta">MC 1.21.90 <span class="vpipe"></span> API 2.1.0-beta</div>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div class="sidebar-card">
+                <h3>Changelog</h3>
+                <ul class="changelog-list">
+                    <li>Created the Achievement support version</li>
+                    <li>Added performance mode</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Warnings</h3>
+                <p>
+                    <span class="danger-text">Warning:</span> Some features require the Beta API to work properly.
+                    Without it, some blocks may not render correctly.
+                </p>
+            </div>
+
+        </aside>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
