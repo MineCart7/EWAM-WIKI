@@ -14,7 +14,6 @@
     --accent: #3ba53b;
     --accent-light: #4af34a;
     --accent-yellow: #ffe100;
-    /* verde Minecraft */
     --accent-soft: rgba(59, 165, 59, 0.15);
     --radius: 10px;
     --shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
@@ -71,7 +70,6 @@ body {
     position: relative;
 }
 
-/* Linea a sinistra (blu per i comandi) */
 .command-box::before {
     content: "";
     position: absolute;
@@ -80,21 +78,17 @@ body {
     width: 4px;
     height: 100%;
     background: #4fc3f7;
-    /* azzurro stile "info" */
     border-radius: 4px 0 0 4px;
 }
 
-/* Comando (font Minecraft, bianco) */
 .command-box .cmd {
     margin: 0;
     font-size: 1.1em;
     margin-bottom: 4px;
     color: #ffffff;
-    /* <-- testo bianco */
     transition: 0.2s ease;
 }
 
-/* Glow al passaggio */
 .command-box:hover .cmd {
     text-shadow:
         0 0 6px #ffffff;
@@ -108,14 +102,12 @@ body {
     color: #e6e6e6;
 }
 
-/* Comando (font Minecraft) */
 .command-box .cmd {
     margin: 0;
     font-size: 1.1em;
     margin-bottom: 4px;
 }
 
-/* Descrizione (font normale) */
 .command-box .cmd-desc {
     margin: 0;
     opacity: 0.85;
@@ -123,7 +115,6 @@ body {
     transition: 0.2s ease;
 }
 
-/* VERSION LIST */
 .version-list {
     display: flex;
     flex-direction: column;
@@ -146,7 +137,6 @@ body {
     color: var(--accent);
 }
 
-/* HEADER */
 header {
     padding: 18px 32px;
     border-bottom: 1px solid #1a1c22;
@@ -173,8 +163,6 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* LAYOUT */
-/* TAB NAVIGATION */
 .tab-nav {
     display: flex;
     justify-content: left;
@@ -184,11 +172,9 @@ header {
     padding-bottom: 6px;
     width: 100%;
     flex-wrap: wrap;
-    /* <--- QUESTA È LA SOLUZIONE */
 }
 
 
-/* TAB CONTENT */
 .tab-content {
     display: none;
 }
@@ -197,7 +183,6 @@ header {
     display: block;
 }
 
-/* IMAGE GALLERY */
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 2fr));
@@ -207,7 +192,6 @@ header {
 
 .image-gallery img {
     width: 100%;
-    /* occupano tutta la cella */
     height: auto;
     border-radius: 6px;
     border: 1px solid var(--border);
@@ -217,16 +201,12 @@ header {
 
 .version-link {
     text-decoration: none;
-    /* niente sottolineatura */
     color: inherit;
-    /* mantiene il colore del testo */
     display: block;
-    /* permette di cliccare tutto il blocco */
 }
 
 
 
-/* CONTENUTO TAB */
 .tab-content {
     display: none;
 }
@@ -235,7 +215,6 @@ header {
     display: block;
 }
 
-/* GALLERIA IMMAGINI */
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -265,7 +244,6 @@ header {
     }
 }
 
-/* SIDEBAR */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -392,9 +370,7 @@ header {
 
 .version-icon {
     height: 20px;
-    /* rimpicciolisce l’immagine */
     width: auto;
-    /* mantiene le proporzioni */
     display: block;
 }
 
@@ -408,7 +384,6 @@ header {
     vertical-align: text-bottom;
 }
 
-/* ACCENT VERSION */
 .version-entry.accent {
     border-left: 4px solid var(--accent);
     padding-left: 10px;
@@ -443,7 +418,6 @@ header {
     font-weight: 600;
 }
 
-/* CONTENUTO PRINCIPALE */
 .content-card {
     background: linear-gradient(145deg, #1e2129, #1b1e24);
     border: 1px solid var(--border);
@@ -519,14 +493,12 @@ red {
 .feature-tab-btn:hover {
     color: var(--accent-light);
     text-shadow: 0 0 6px var(--accent);
-    /* AURA HOVER LEGGERA */
 }
 
 .tab-btn.active,
 .feature-tab-btn.active {
     color: var(--accent-light);
     text-shadow: 0 0 10px var(--accent), 0 0 18px var(--accent);
-    /* AURA PIÙ FORTE */
 }
 
 .tab-btn.active::after,
@@ -541,41 +513,6 @@ red {
     border-radius: 999px;
 }
 
-/* MAIN FEATURES TABS 
-.feature-tabs {
-    margin-top: 10px;
-}
-
-.feature-tab-nav {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 6px;
-    flex-wrap: wrap;
-}
-
-.feature-tab-btn {
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    font-size: 14px;
-    padding: 8px 14px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.2s ease;
-}
-
-.feature-tab-btn:hover {
-    color: var(--accent-light);
-    text-shadow: 0 0 6px var(--accent);
-}
-
-.feature-tab-btn.active {
-    color: var(--accent-light);
-    text-shadow: 0 0 10px var(--accent);
-}
-*/
 .feature-tab-content {
     display: none;
     padding: 10px 0;
@@ -596,7 +533,6 @@ red {
     line-height: 1.6;
 }
 
-/* FEATURE SHOWCASE (text left, image right) */
 .feature-showcase {
     display: flex;
     align-items: top;
@@ -612,15 +548,12 @@ red {
 .showcase-image {
     flex: 0 0 auto;
     max-height: 180px;
-    /* dimensione stabile */
     margin-left: auto;
-    /* FORZA a destra */
     border-radius: 6px;
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
 }
 
-/* Responsive: su mobile immagine sotto */
 @media (max-width: 900px) {
     .feature-showcase {
         flex-direction: column;
@@ -652,4 +585,5 @@ red {
     border-radius: 6px;
     box-shadow: 0 0 20px rgb(89, 109, 128);
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
+
 }
