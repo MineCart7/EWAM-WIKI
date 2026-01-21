@@ -149,23 +149,14 @@ header {
 /* TAB NAVIGATION */
 .tab-nav {
     display: flex;
-    gap: 6px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 6px;
-    width: 100%;
-}
-
-.tab-nav {
-    display: flex;
     justify-content: left;
-    /* CENTRA I TAB */
     gap: 20px;
-    /* DISTANZA SIMILE A PRIMA */
     margin-bottom: 12px;
     border-bottom: 1px solid var(--border);
     padding-bottom: 6px;
     width: 100%;
+    flex-wrap: wrap;
+    /* <--- QUESTA È LA SOLUZIONE */
 }
 
 
